@@ -24,21 +24,21 @@ public class ObjectPool
     /// <summary>
     /// Tries to fetch a game object from the object pool.
     /// </summary>
-    /// <param name="fetchedObj">The fetched game object. (Null if doesn't exists)</param>
+    /// <param name="fetchedObjects">The fetched game object. (Null if doesn't exists)</param>
     /// <returns>True if a game object was fetched. False if none was found.</returns>
-    public bool TryFetchObjectFromPool(out GameObject fetchedObj)
+    public bool TryFetchObjectFromPool(out GameObject fetchedObjects)
     {
 
-        fetchedObj = null;
+        fetchedObjects = null;
         foreach (var obj in pool)
         {
             if (!obj.activeInHierarchy)
             {
-                fetchedObj = obj;
+                fetchedObjects = obj;
                 break;
             }
         }
 
-        return fetchedObj != null;
+        return fetchedObjects != null;
     }
 }

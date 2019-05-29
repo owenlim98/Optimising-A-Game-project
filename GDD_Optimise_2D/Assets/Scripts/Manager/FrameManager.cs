@@ -252,7 +252,6 @@ public class FrameManager : Singleton<FrameManager>
         }
     }
 
-
     private Vector3 GetUserMousePosition()
     {
         return camera.ScreenToWorldPoint(Input.mousePosition);

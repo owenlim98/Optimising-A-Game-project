@@ -86,7 +86,7 @@ public class Frame : MonoBehaviour
 
     float GetShortestDistanceToLeftNeighbour()
     {
-        // Get the left-most x point of this frame.
+        // Get the left border of the frame.
         float leftPoint = transform.position.x;
         leftPoint -= frameCollider.size.x / 2f;
 
